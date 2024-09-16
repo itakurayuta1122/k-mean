@@ -1,4 +1,5 @@
 import pandas as pd
+import streamlit
 
 dataset = pd.read_csv("k-means.csv")
 data = dataset.sample(frac=0.95, random_state=786).reset_index(drop=True)
