@@ -1,4 +1,4 @@
-python==3.11
+python==3.10.9
 pycaret==3.3.2
 streamlit==1.38.0
 pandas==1.5.3
