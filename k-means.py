@@ -2,6 +2,9 @@ import pandas as pd
 import streamlit as st
 
 dataset = pd.read_csv("k-means.csv")
+
+st.write("クラスタリング前",dataset)
+
 data = dataset.sample(frac=0.95, random_state=786).reset_index(drop=True)
 data_unseen = dataset.drop(data.index).reset_index(drop=True)
 
@@ -14,4 +17,4 @@ kmeans = create_model('kmeans',num_clusters = 5 )
 
 kmean_results = assign_model(kmeans)
 
-st.write(kmean_results)
+st.write("クラスタリング後",kmean_results)
